@@ -50,5 +50,5 @@ app.get('/cart', (req, res) => {
 });
 
 app.listen(2017, () => {
-    console.log("服务器开启成功，请访问2017端口。。。")
+    console.log("服务器开启成功，请访问2017端口。。")
 });
