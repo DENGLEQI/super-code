@@ -8,6 +8,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "mongodb": "^3.4.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {},
