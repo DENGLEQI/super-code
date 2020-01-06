@@ -3,7 +3,7 @@
 // const MongoClient = mongodb.MongoClient;
 const { MongoClient } = require('mongodb');
 let DBurl = 'mongodb://localhost:27017';
-let DBname = 'h51912';
+let DBname = 'H51912';
 //连接mongodb数据库
 
 // MongoClient.connect(DBurl, async (err, client) => {

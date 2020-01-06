@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义指令</title>
+</head>
+
+<body>
+    <div id="add">
+        <h1 v-text-upper>dengleqi</h1>
+        <h2 v-text-upper>zhangsanlisiwangmazi</h2>
+        <input v-focus type="text" placeholder="自动聚焦">
+    </div>
+</body>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 注册全局自定义指令
+    Vue.directive("textUpper", {
+        inserted: function (el) {
+            // console.log(el);
+            el.style.color = "green";
+            el.innerHTML = el.innerHTML.toUpperCase();
+        }
+    });
+    let vm = new Vue({
+        el: '#add',
+        directives: {//局部指令的注册
+            focus: {
+                inserted: function (el) {
+                    el.focus();//自动聚焦
+                }
+            }
+        }
+    });
+</script>
+
+</html>

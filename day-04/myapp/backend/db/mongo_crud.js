@@ -145,20 +145,20 @@ MongoClient.connect(DBurl, async (err, client) => {
     // let data6 = await col.find().limit(num).skip((page - 1) * num).toArray();
     // console.log(data6);
 
-    // //需求：修改name叫 月亮代表我的心; 改成：月亮惹的祸
-    // let data7 = await col.updateMany({
-    //     name: '蒲公英的约定'
-    // }, {
-    //     $set: {
-    //         name: '怕傻傻的'
-    //     }
-    // });
-    // if (data7.modifiedCount) {
-    //     console.log('修改成功');
-    // } else {
-    //     console.log('修改失败');
-    // }
-    // console.log(data7);
+    //需求：修改name叫 月亮代表我的心; 改成：月亮惹的祸
+    let data7 = await col.updateMany({
+        name: '蒲公英的约定'
+    }, {
+        $set: {
+            name: '怕傻傻的'
+        }
+    });
+    if (data7.modifiedCount) {
+        console.log('修改成功');
+    } else {
+        console.log('修改失败');
+    }
+    console.log(data7);
 
     // //需求：删除id 的数据
     // let data8 = await col.deleteMany({
