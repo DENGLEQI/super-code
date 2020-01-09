@@ -11,26 +11,72 @@
             width: 100%;
             height: 200px;
             background: pink;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+            color: aliceblue;
         }
 
         #main {
             width: 100%;
             height: 200px;
             background: green;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+            color: aliceblue;
         }
 
         #footer {
             width: 100%;
             height: 200px;
             background: blue;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+            color: aliceblue;
         }
     </style>
 </head>
 
 <body>
-    <div id="header"></div>
-    <div id="main"></div>
-    <div id="footer"></div>
+    <div id="add">
+        <!-- <div id="header"></div>
+        <div id="main"></div>
+        <div id="footer"></div> -->
+        <add-header></add-header>
+        <add-main></add-main>
+        <add-footer></add-footer>
+
+    </div>
 </body>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 全局组件
+    Vue.component("add-header", {
+        template: '<div id="header">header</div>',
+        data: function () {
+            return {
+
+            }
+        }
+    });
+    Vue.component("add-footer", {
+        template: '<div id="footer">footer</div>',
+        data: function () {
+            return {
+
+            }
+        }
+    });
+    let vm = new Vue({
+        el: "#add",
+        components: {//局部组件
+            'add-main': {
+                template: '<div id="main">main</div>'
+            }
+        }
+    })
+</script>
 
 </html>
